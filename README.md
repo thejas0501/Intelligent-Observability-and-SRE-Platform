@@ -1,3 +1,4 @@
+
 # Intelligent Observability & SRE Platform
 
 > Full-stack observability layer with SLO engine, error budgets & burn rate alerts — built using Google's SRE methodology on AWS. The data backbone for AI-powered incident remediation.
@@ -41,3 +42,7 @@ flowchart LR
 6.  **Dashboards:** Grafana integrations
 
 *See `IMPLEMENTATION_PLAN.md` for a complete breakdown of the architecture, week-by-week implementation details, and runbooks.*
+=======
+# Intelligent-Observability-and-SRE-Platform
+Full-stack observability layer with SLO engine, error budgets &amp; burn rate alerts — built using Google's SRE methodology on AWS. The data backbone for AI-powered incident remediation.
+
