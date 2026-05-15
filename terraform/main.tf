@@ -30,3 +30,10 @@ module "rds" {
   ec2_sg_id          = module.ec2.sg_id
   db_password        = var.db_password
 }
+
+module "lookout" {
+  source       = "./modules/lookout"
+  project_name = var.project_name
+  environment  = var.environment
+  alert_email  = var.alert_email
+}

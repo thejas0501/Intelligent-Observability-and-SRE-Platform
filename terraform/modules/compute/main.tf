@@ -27,6 +27,13 @@ resource "aws_security_group" "ec2_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
+    description = "Prometheus UI"
+    from_port   = 9090
+    to_port     = 9090
+    protocol    = "tcp"
+    cidr_blocks = ["${var.my_ip}/32"]
+  }
+  ingress {
     description = "Prometheus node exporter"
     from_port   = 9100
     to_port     = 9100
@@ -48,6 +55,12 @@ resource "aws_instance" "app" {
   subnet_id              = var.public_subnet_id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   iam_instance_profile   = var.iam_instance_profile
+  key_name               = "sre-platform-key"
+
+  root_block_device {
+    volume_size = 20
+    volume_type = "gp3"
+  }
 
   user_data = <<-EOF
     #!/bin/bash
