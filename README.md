@@ -221,3 +221,6 @@ This project is **Project 1** in a 5-part portfolio meticulously designed to dem
 5.  **Zero-Trust Security & Policy-as-Code:** Securing the CI/CD supply chain with OPA, Trivy, and strict Kubernetes RBAC.
 
 *If you are an engineering manager or technical recruiter building out high-performing reliability teams, I am actively interviewing for full-time SRE roles and would love to connect.*
+
+---
+**Author:** K A Thejas
